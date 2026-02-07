@@ -14,7 +14,6 @@ const SchoolHistory = () => {
 
       <div className="max-w-[420px]">
         <SectionTitle subtitle="Formação" title="Formação acadêmica" />
-        <p className="text-gray-400 mt-6">Minha Trajetória de Aprendizagem</p>
       </div>
     </section>
   );

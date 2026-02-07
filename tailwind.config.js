@@ -8,8 +8,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
+        sans: ["var(--font-clash)", "var(--font-inter)", "sans-serif"],
         mono: ["var(--font-plex-mono)", "monospace"],
+        clash: ["var(--font-clash)", "sans-serif"],
       },
       backgroundImage: {
         "hero-image": "url(/images/hero-bg.png)",

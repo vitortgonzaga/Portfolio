@@ -17,11 +17,11 @@ export const NavItem = ({ label, href }: NavItemProps) => {
     <Link
       href={href}
       className={cn(
-        "text-gray-400 flex items-center gap-2 font-medium font-mono",
+        "text-gray-400 flex items-center gap-2 font-medium",
         isActive && "text-gray-50"
       )}
     >
-      <span className="text-amber-400">#</span>
+      <span className="text-sky-400">#</span>
       {label}
     </Link>
   );

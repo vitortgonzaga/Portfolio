@@ -24,7 +24,7 @@ const ExperienceItem = () => {
             <a
               href="https://www.linkedin.com/company/multittechengenharia/posts/?feedView=all"
               target="_blank"
-              className="text-gray-500 hover:text-amber-400 transition-colors"
+              className="text-gray-500 hover:text-sky-400 transition-colors"
             >
               @ Multittech
             </a>
@@ -75,7 +75,7 @@ const ExperienceItem = () => {
             <a
               href="https://inatel.br/ehealth/"
               target="_blank"
-              className="text-gray-500 hover:text-amber-400 transition-colors"
+              className="text-gray-500 hover:text-sky-400 transition-colors"
             >
               @ E-Health Innovation Center
             </a>

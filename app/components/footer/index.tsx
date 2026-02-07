@@ -7,7 +7,7 @@ const Footer = () => {
         Desenvolvido com Next.js e Tailwind CSS.
       </span>
       <span>
-        Made By <strong className="text-amber-500">Vitor Torres</strong>
+        Made By <strong className="text-sky-500">Vitor Torres</strong>
       </span>
     </footer>
   );

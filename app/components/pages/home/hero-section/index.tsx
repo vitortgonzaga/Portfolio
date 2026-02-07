@@ -6,6 +6,8 @@ import {
   TbBrandLinkedin,
   TbBrandWhatsapp,
 } from "react-icons/tb";
+import { Title } from "../../../title";
+import { clashDisplay } from "../../../../utils/fonts";
 
 const MOCK_CONTACTS = [
   {
@@ -30,12 +32,12 @@ const HeroSection = () => {
     >
       <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
         <div className="w-full lg:max-w-[530px]">
-          <h1 className="text-4xl  font-medium mt-2">Vitor Torres</h1>
-          <h2 className=" text-amber-500 font-medium mt-2">
-            Engenheiro de Software | Técnico em Eletroeletrônica
+          <Title />
+          <h2 className={`${clashDisplay.className} text-sky-500 font-semibold text-xl mt-2`}>
+            Engenheiro de Software
           </h2>
 
-          <p className="text-gray-400 my-6 text-sm sm:text-base">
+          <p className={`${clashDisplay.className} text-gray-400 my-6 text-sm sm:text-base`}>
             Sou um desenvolvedor apaixonado por tecnologia, com mais de 1 ano de
             experiência na criação de interfaces de usuário modernas, bonitas e
             funcionais. Estou sempre em busca de projetos desafiadores que me
@@ -49,7 +51,7 @@ const HeroSection = () => {
             <a
               href="/curriculo.pdf"
               target="_blank"
-              className="bg-amber-600 py-3 px-4 rounded-lg text-gray-50 flex items-center justify-center gap-2 hover:bg-amber-500 transition-all disabled:opacity-50 cursor-pointer w-max"
+              className="bg-sky-600 py-3 px-4 rounded-lg text-gray-50 flex items-center justify-center gap-2 hover:bg-sky-500 transition-all disabled:opacity-50 cursor-pointer w-max"
             >
               Veja meu Currículo
               <HiNewspaper size={18} />
@@ -63,7 +65,7 @@ const HeroSection = () => {
                   key={`contact-${index}
               `}
                   target="_blank"
-                  className="hover:text-amber-500 transition-colors"
+                  className="hover:text-sky-500 transition-colors"
                 >
                   {contact.icon}
                 </a>
@@ -77,7 +79,7 @@ const HeroSection = () => {
           height={400}
           src="/images/profile-pic.png"
           alt="foto de perfil"
-          className="w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] mb-6 lg:mb-0 rounded-full object-cover border-8 border-amber-500 "
+          className="w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] mb-6 lg:mb-0 rounded-full object-cover border-8 border-sky-500 "
         />
       </div>
     </section>

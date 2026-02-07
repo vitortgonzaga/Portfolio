@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "./components/header";
 import Footer from "./components/footer";
 import ContactForm from "./components/contact-form";
+import { clashDisplay } from "./utils/fonts";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,7 +19,7 @@ const plexMono = IBM_Plex_Mono({
 export const metadata = {
   title: "Meu Portfólio",
   icons: {
-    icon: "/images/logo2.png",
+    icon: "/images/v.png",
   },
 };
 
@@ -29,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${plexMono.variable} antialiased`}>
+      <body className={`${inter.variable} ${plexMono.variable} ${clashDisplay.variable} antialiased`}>
         <Header />
         {children}
         <ContactForm />

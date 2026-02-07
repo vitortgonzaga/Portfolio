@@ -19,7 +19,7 @@ const ProjectCard2 = () => {
       </div>
       <div>
         <h3 className="flex items-center gap-3 font-medium text-lg text-gray-50">
-          <span className="w-3 h-3 bg-amber-400 rounded-full"></span>
+          <span className="w-3 h-3 bg-sky-400 rounded-full"></span>
           Portfolio
         </h3>
 

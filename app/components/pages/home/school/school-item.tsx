@@ -23,7 +23,7 @@ const SchoolItem = () => {
           <a
             href="https://inatel.br/home/"
             target="_blank"
-            className="text-gray-500 hover:text-amber-400 transition-colors"
+            className="text-gray-500 hover:text-sky-400 transition-colors"
           >
             @ Instituto Nacional de Telecomunicações – INATEL
           </a>
@@ -61,7 +61,7 @@ const SchoolItem = () => {
           <a
             href="https://www.feg.unesp.br/#!/cotec"
             target="_blank"
-            className="text-gray-500 hover:text-amber-400 transition-colors"
+            className="text-gray-500 hover:text-sky-400 transition-colors"
           >
             @ Colégio Técnico Industrial de Guaratinguetá - CTIG UNESP
           </a>

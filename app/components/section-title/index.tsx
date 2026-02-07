@@ -1,4 +1,5 @@
 import { cn } from "../../lib/utils";
+import { clashDisplay } from "../../utils/fonts";
 
 type SectionTitleProps = {
   title: string;
@@ -13,8 +14,8 @@ export const SectionTitle = ({
 }: SectionTitleProps) => {
   return (
     <div className={cn("flex flex-col gap-4", className)}>
-      <span className="font-mono text-sm text-amber-400">{`../${subtitle}`}</span>
-      <h3 className="text-3xl font-medium">{title}</h3>
+      <span className={`${clashDisplay.className} text-sm text-sky-400`}>{`../${subtitle}`}</span>
+      <h3 className={`${clashDisplay.className} text-3xl font-semibold`}>{title}</h3>
     </div>
   );
 };

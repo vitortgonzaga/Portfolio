@@ -53,7 +53,7 @@ const ContactForm = () => {
               key={`contact-${index}
               `}
               target="_blank"
-              className="hover:text-amber-500 transition-colors"
+              className="hover:text-sky-500 transition-colors"
             >
               {contact.icon}
             </a>
@@ -65,18 +65,18 @@ const ContactForm = () => {
         >
           <input
             placeholder="Nome"
-            className="w-full h-14 bg-gray-600 rounded-lg text-white placeholder:text-gray-300 p-4 focus:outline-none focus:ring-1 ring-amber-500"
+            className="w-full h-14 bg-gray-600 rounded-lg text-white placeholder:text-gray-300 p-4 focus:outline-none focus:ring-1 ring-sky-500"
             {...register("name")}
           />
           <input
             type="email"
             placeholder="Email"
-            className="w-full h-14 bg-gray-600 rounded-lg text-white placeholder:text-gray-300 p-4 focus:outline-none focus:ring-1 ring-amber-500"
+            className="w-full h-14 bg-gray-600 rounded-lg text-white placeholder:text-gray-300 p-4 focus:outline-none focus:ring-1 ring-sky-500"
             {...register("email")}
           />
           <textarea
             placeholder="Mensagem"
-            className="resize-none w-full h-[138px] bg-gray-600 rounded-lg text-white placeholder:text-gray-300 p-4 focus:outline-none focus:ring-1 ring-amber-500"
+            className="resize-none w-full h-[138px] bg-gray-600 rounded-lg text-white placeholder:text-gray-300 p-4 focus:outline-none focus:ring-1 ring-sky-500"
             maxLength={500}
             {...register("message")}
           />

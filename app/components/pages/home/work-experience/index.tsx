@@ -13,12 +13,7 @@ const WorkExperience = () => {
           subtitle="experiências"
           title="Experiência Profissional"
         />
-        <p className="text-gray-400 mt-6">
-          Em busca contínua de novos desafios e projetos inovadores para aplicar
-          minhas habilidades e gerar resultados.
-        </p>
       </div>
-
       <div className="flex flex-col gap-4">
         <ExperienceItem />
       </div>
