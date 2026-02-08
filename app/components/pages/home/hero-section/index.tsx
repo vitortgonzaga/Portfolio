@@ -14,7 +14,7 @@ import { useLanguage } from "../../../../contexts/LanguageContext";
 
 const MOCK_CONTACTS = [
   {
-    url: "https://github.com/Torress01",
+    url: "https://github.com/vitortgonzaga",
     icon: <TbBrandGithub />,
   },
   {

@@ -39,7 +39,7 @@ const ProjectCard = () => {
           <TechBadge name="Tailwind" />
         </div>
 
-        <Link href="https://github.com/Torress01/Portfolio" target="blank">
+        <Link href="https://github.com/vitortgonzaga/Portfolio" target="blank">
           Ver Projeto
           <HiArrowNarrowRight />
         </Link>

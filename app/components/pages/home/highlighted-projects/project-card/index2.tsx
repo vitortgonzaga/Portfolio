@@ -41,7 +41,7 @@ const ProjectCard2 = () => {
           <TechBadge name="Next.js" />
         </div>
 
-        <Link href="https://Github.com/Torress01" target="blank">
+        <Link href="https://Github.com/vitortgonzaga" target="blank">
           Ver Projeto
           <HiArrowNarrowRight />
         </Link>
