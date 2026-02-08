@@ -2,8 +2,9 @@
 
 @layer base {
   body {
-    @apply bg-zinc-900 text-gray-100;
+    @apply bg-black text-gray-100;
     font-family: var(--font-clash), sans-serif;
+    position: relative;
   }
 }
 

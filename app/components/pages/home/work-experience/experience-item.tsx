@@ -1,8 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import TechBadge from "../../../tech-badge";
+import { useLanguage } from "../../../../contexts/LanguageContext";
 
 const ExperienceItem = () => {
+  const { t } = useLanguage();
+
   return (
     <div>
       <div className="grid grid-cols-[40px_1fr] gap-4 md:gap-10">
@@ -26,26 +31,20 @@ const ExperienceItem = () => {
               target="_blank"
               className="text-gray-500 hover:text-sky-400 transition-colors"
             >
-              @ Multittech
+              @ {t("experience.multittech.company")}
             </a>
             <h4 className="text-gray-300">
-              Estagiário em desenvolvimento Back-end
+              {t("experience.multittech.role")}
             </h4>
             <span className="text-gray-500">
-              mar 2025 • O momento • ( 4 meses ){" "}
+              {t("experience.multittech.period")}
             </span>
             <p className="text-gray-400 max-w-[600px]">
-              Durante meu estágio, atuei auxiliando no desenvolvimento de
-              diversos projetos usando Google Scripts. Participei ativamente do
-              desenvolvimento de uma solução IoT para o setor agroindustrial,
-              implementada em um Raspberry Pi, que mede em tempo real o peso e o
-              rendimento da colheita, com scripts, além de uma plataforma web
-              para monitoramento da produção em tempo real, otimizando a tomada
-              de decisão no setor agroindustrial.
+              {t("experience.multittech.description")}
             </p>
           </div>
           <p className="text-gray-400 text-sm mb-3 mt-6 font-semibold">
-            Competências
+            {t("experience.subtitle")}
           </p>
           <div className="flex gap-x-2 gap-y-3 flex-wrap lg:max-w-[350px] mb-8">
             <TechBadge name="Python" />
@@ -77,24 +76,20 @@ const ExperienceItem = () => {
               target="_blank"
               className="text-gray-500 hover:text-sky-400 transition-colors"
             >
-              @ E-Health Innovation Center
+              @ {t("experience.ehealth.company")}
             </a>
             <h4 className="text-gray-300">
-              Pesquisador em iniciação cíentifica
+              {t("experience.ehealth.role")}
             </h4>
             <span className="text-gray-500">
-              Nov 2023 • Fev 2025 • ( 1 ano e 3 meses )
+              {t("experience.ehealth.period")}
             </span>
             <p className="text-gray-400 max-w-[600px]">
-              Durante meu período na iniciação cíentifica, atuei no
-              desenvolvimento do Sistema IoT ELA, um projeto focado em
-              comunicação e automação residencial acessível para pessoas com
-              ELA. A interface utiliza Eye Tracking para facilitar a interação
-              sem a necessidade de movimentos manuais.
+              {t("experience.ehealth.description")}
             </p>
           </div>
           <p className="text-gray-400 text-sm mb-3 mt-6 font-semibold">
-            Competências
+            {t("experience.subtitle")}
           </p>
           <div className="flex gap-x-2 gap-y-3 flex-wrap lg:max-w-[350px] mb-8">
             <TechBadge name="Python" />

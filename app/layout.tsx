@@ -4,6 +4,8 @@ import { Header } from "./components/header";
 import Footer from "./components/footer";
 import ContactForm from "./components/contact-form";
 import { clashDisplay } from "./utils/fonts";
+import { AnimatedBackground } from "./components/animated-background";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -31,10 +33,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${plexMono.variable} ${clashDisplay.variable} antialiased`}>
-        <Header />
-        {children}
-        <ContactForm />
-        <Footer />
+        <LanguageProvider>
+          <AnimatedBackground />
+          <Header />
+          {children}
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

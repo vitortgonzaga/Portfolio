@@ -1,14 +1,22 @@
+"use client";
+
 import React from "react";
 import { SectionTitle } from "../../../section-title";
 import TechBadge from "../../../tech-badge";
+import { ScrollReveal } from "../../../scroll-reveal";
+import { useLanguage } from "../../../../contexts/LanguageContext";
 
 const KnownTechs = () => {
+  const { t } = useLanguage();
+
   return (
-    <section id="competencias" className="container py-12 ">
-      <SectionTitle
-        subtitle="competências"
-        title="Conhecimentos e Interesses"
-      />
+    <ScrollReveal>
+      <section id="competencias" className="container py-12">
+        <div className="bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/50 rounded-2xl p-8 md:p-12 shadow-2xl">
+          <SectionTitle
+            subtitle={t("skills.subtitle")}
+            title={t("skills.title")}
+          />
       <div className="mt-10">
         <div className="flex items-center space-x-2">
           <span className="w-2 h-2 bg-sky-400 rounded-full"></span>
@@ -68,7 +76,7 @@ const KnownTechs = () => {
       <div className="mt-5">
         <div className="flex items-center space-x-2">
           <span className="w-2 h-2 bg-sky-400 rounded-full"></span>
-          <span>Tests</span>
+          <span>{t("skills.tests")}</span>
         </div>
         <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px] mt-2">
           <TechBadge
@@ -109,7 +117,9 @@ const KnownTechs = () => {
           </div>
         </div>
       </div>
-    </section>
+      </div>
+      </section>
+    </ScrollReveal>
   );
 };
 

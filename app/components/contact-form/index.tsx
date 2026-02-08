@@ -9,6 +9,8 @@ import React from "react";
 // import { zodResolver } from "@hookform/resolvers/zod";
 import { TbBrandLinkedin, TbBrandWhatsapp } from "react-icons/tb";
 import { SectionTitle } from "../section-title";
+import { ScrollReveal } from "../scroll-reveal";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 // const ContactFormSchema = z.object({
 //   name: z.string().min(3).max(100),
@@ -19,6 +21,7 @@ import { SectionTitle } from "../section-title";
 // type ContactFormData = z.infer<typeof ContactFormSchema>;
 
 const ContactForm = () => {
+  const { t } = useLanguage();
   // const { handleSubmit, register } = useForm<ContactFormData>({
   //   resolver: zodResolver(ContactFormSchema),
   // });
@@ -39,55 +42,31 @@ const ContactForm = () => {
   ];
 
   return (
-    <section className="py-16 px-6 md:px-32 flex items-center justify-center bg-zinc-800 ">
-      <div className="w-full max-w-[420px] mx-auto">
-        <SectionTitle
-          subtitle="contato"
-          title="Vamos trabalhar juntos? Entre em contato"
-          className="items-center text-center"
-        />
-        <div className="text-7xl text-gray-200 flex justify-center items-center h-20 gap-3 mt-5">
-          {MOCK_CONTACTS.map((contact, index) => (
-            <a
-              href={contact.url}
-              key={`contact-${index}
-              `}
-              target="_blank"
-              className="hover:text-sky-500 transition-colors"
-            >
-              {contact.icon}
-            </a>
-          ))}
+    <ScrollReveal>
+      <section className="py-16 px-6 md:px-32 flex items-center justify-center bg-zinc-800/50">
+        <div className="w-full max-w-[520px] mx-auto">
+          <div className="bg-zinc-900/60 backdrop-blur-sm border border-zinc-800/50 rounded-2xl p-8 md:p-12 shadow-2xl">
+            <SectionTitle
+              subtitle={t("contact.subtitle")}
+              title={t("contact.title")}
+              className="items-center text-center"
+            />
+            <div className="text-7xl text-gray-200 flex justify-center items-center h-20 gap-3 mt-5">
+              {MOCK_CONTACTS.map((contact, index) => (
+                <a
+                  href={contact.url}
+                  key={`contact-${index}`}
+                  target="_blank"
+                  className="hover:text-sky-500 transition-colors"
+                >
+                  {contact.icon}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
-        {/* <form
-          className="mt-12 w-full flex flex-col gap-4"
-          onSubmit={handleSubmit(onSubmit)}
-        >
-          <input
-            placeholder="Nome"
-            className="w-full h-14 bg-gray-600 rounded-lg text-white placeholder:text-gray-300 p-4 focus:outline-none focus:ring-1 ring-sky-500"
-            {...register("name")}
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full h-14 bg-gray-600 rounded-lg text-white placeholder:text-gray-300 p-4 focus:outline-none focus:ring-1 ring-sky-500"
-            {...register("email")}
-          />
-          <textarea
-            placeholder="Mensagem"
-            className="resize-none w-full h-[138px] bg-gray-600 rounded-lg text-white placeholder:text-gray-300 p-4 focus:outline-none focus:ring-1 ring-sky-500"
-            maxLength={500}
-            {...register("message")}
-          />
-
-          <Button className="w-max mx-auto mt-6">
-            Enviar Mensagem
-            <HiArrowNarrowRight />
-          </Button>
-        </form> */}
-      </div>
-    </section>
+      </section>
+    </ScrollReveal>
   );
 };
 

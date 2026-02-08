@@ -1,8 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import TechBadge from "../../../tech-badge";
+import { useLanguage } from "../../../../contexts/LanguageContext";
 
 const SchoolItem = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="grid grid-cols-[40px_1fr] gap-4 md:gap-10">
       <div className="flex items-center flex-col gap-4">
@@ -25,13 +30,13 @@ const SchoolItem = () => {
             target="_blank"
             className="text-gray-500 hover:text-sky-400 transition-colors"
           >
-            @ Instituto Nacional de Telecomunicações – INATEL
+            @ {t("education.university.institution")}
           </a>
-          <h4 className="text-gray-300">Engenharia de Software</h4>
-          <span className="text-gray-500">2022 - 2027</span>
+          <h4 className="text-gray-300">{t("education.university.course")}</h4>
+          <span className="text-gray-500">{t("education.university.period")}</span>
         </div>
         <p className="text-gray-400 text-sm mb-3 mt-6 font-semibold">
-          Principais conhecimentos
+          {t("skills.subtitle")}
         </p>
         <div className="flex gap-x-2 gap-y-3 flex-wrap lg:max-w-[350px] mb-8">
           <TechBadge name="C++" />
@@ -63,12 +68,12 @@ const SchoolItem = () => {
             target="_blank"
             className="text-gray-500 hover:text-sky-400 transition-colors"
           >
-            @ Colégio Técnico Industrial de Guaratinguetá - CTIG UNESP
+            @ {t("education.highschool.institution")}
           </a>
           <h4 className="text-gray-300">
-            Ensino Médio e Técnico em Eletroletrônica
+            {t("education.highschool.course")}
           </h4>
-          <span className="text-gray-500">2018 - 2020</span>
+          <span className="text-gray-500">{t("education.highschool.period")}</span>
         </div>
       </div>
     </div>
